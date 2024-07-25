@@ -1,13 +1,12 @@
 import time
 
 from selenium import webdriver
-import logging
 from selenium.webdriver.common.by import By
 
 
-def test_login_appvo():
+def test_login_app():
     driver=webdriver.Chrome()
-    driver.get("https://app.vwo.com/#/login")
+    driver.get("https://app.vwo.com")
 
     email=driver.find_element(By.ID,"login-username")
     email.send_keys("shubhambhavi888@gmail.com")
@@ -15,13 +14,24 @@ def test_login_appvo():
     password = driver.find_element(By.ID, "login-password")
     password.send_keys("password")
 
-    button=driver.find_element(By.ID,"js-login-btn")
+    button = driver.find_element(By.ID , "js-login-btn")
     button.click()
 
-    # error_message=driver.find_element(By.CLASS_NAME,"notification-box-description").text
-    # assert error_message == "Your email, password, IP address or location did not match"
+    error_mess = driver.find_elements(By.XPATH, "//div[contains(text(),'IP')]")
+    for i in error_mess:
+        print(i)
 
-    time.sleep(10)
+       # alert=driver.switch_to.alert
+    # alert_text=alert.text
+    # print(alert_text)
+    # #
+
+
+
+    # Your email, password, IP address or location did not match</div>
+
+
+    time.sleep(8)
     driver.quit()
 
 # <input

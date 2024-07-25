@@ -11,6 +11,21 @@ def test_login_details_chrome():
 
     make_appointment=driver.find_element(By.XPATH,"//a[@id='btn-make-appointment']")
     make_appointment.click()
+
+
+
+
+
+
+    # using AND and OR operators in
+    # make_appointment = driver.find_element(By.XPATH, "//a[contains(text(),'Make') and contains(@id,'btn')]")
+    # make_appointment.click()
+    #
+    # make_appointment = driver.find_element(By.XPATH, "//a[contains(text(),'Make') or contains(@id,'btn')]")
+    # make_appointment.click()
+
+
+
     # the value we are using is normal xpath
 
     # make_appointment = driver.find_element(By.XPATH, "/html/body/header/div/a")
