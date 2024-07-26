@@ -17,9 +17,10 @@ def test_login_app():
     button = driver.find_element(By.ID , "js-login-btn")
     button.click()
 
-    error_mess = driver.find_elements(By.XPATH, "//div[contains(text(),'IP')]")
-    for i in error_mess:
-        print(i)
+    error=driver.find_element(By.XPATH,"//div[@class='Mt(40px)']")
+    print(error.text)
+    # assert error.text == "Your email, password, IP address or location did not match","not correct"
+
 
        # alert=driver.switch_to.alert
     # alert_text=alert.text
@@ -31,7 +32,7 @@ def test_login_app():
     # Your email, password, IP address or location did not match</div>
 
 
-    time.sleep(8)
+    time.sleep(12)
     driver.quit()
 
 # <input
