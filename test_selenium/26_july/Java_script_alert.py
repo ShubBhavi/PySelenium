@@ -27,7 +27,7 @@ def test_alert_topic():
 
     button3 = driver.find_element(By.CSS_SELECTOR, "button[onclick='jsConfirm()']")
     button3.click()
-    WebDriverWait(driver, 10).until(EC.alert_is_present())
+    WebDriverWait(driver, 5).until(EC.alert_is_present())
     alert1 = driver.switch_to.alert
     alert1.dismiss()
     result2 = driver.find_element(By.CSS_SELECTOR, "#result")
