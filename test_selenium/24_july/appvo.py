@@ -17,8 +17,8 @@ def test_login_app():
     button = driver.find_element(By.ID , "js-login-btn")
     button.click()
 
-    error=driver.find_element(By.XPATH,"//div[@class='Mt(40px)']")
-    print(error.text)
+    # error=driver.find_element(By.XPATH,"//div[@class='Mt(40px)']")
+    # print(error.text)
     # assert error.text == "Your email, password, IP address or location did not match","not correct"
 
 

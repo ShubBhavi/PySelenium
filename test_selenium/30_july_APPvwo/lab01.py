@@ -60,20 +60,21 @@ def login_details_chrome(username,password):
         driver.quit()
 
 
-# def test_case1():
-#     fullpath=r"C:\Users\233004\PycharmProjects\newprojj\PySelenium\test_selenium\30_july_APPvwo\text_login.xlsx"
-#     credentials=User_credentials(filepath=fullpath)
-#
-#     for user_Cred in credentials:
-#         username=user_Cred["Username"]
-#         password=user_Cred["Password"]
-#         login_details_chrome(username,password)
+def test_case1():
+    fullpath=r"C:\Users\233004\PycharmProjects\newprojj\PySelenium\test_selenium\30_july_APPvwo\text_login.xlsx"
+    credentials=User_credentials(filepath=fullpath)
 
-
-@pytest.mark.parametrize("user_Cred",User_credentials(r"C:\Users\233004\PycharmProjects\newprojj\PySelenium\test_selenium\30_july_APPvwo\text_login.xlsx"))
-def test_case1(user_Cred):
-
+    for user_Cred in credentials:
         username=user_Cred["Username"]
         password=user_Cred["Password"]
         login_details_chrome(username,password)
+
+#  use any one method from this
+
+# @pytest.mark.parametrize("user_Cred",User_credentials(r"C:\Users\233004\PycharmProjects\newprojj\PySelenium\test_selenium\30_july_APPvwo\text_login.xlsx"))
+# def test_case1(user_Cred):
+#
+#         username=user_Cred["Username"]
+#         password=user_Cred["Password"]
+#         login_details_chrome(username,password)
 
