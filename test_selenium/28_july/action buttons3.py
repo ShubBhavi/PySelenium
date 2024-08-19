@@ -21,7 +21,7 @@ def test_action_buttons():
     time.sleep(3)
     from_city=driver.find_element(By.ID,"fromCity")
 
-    action.move_to_element(from_city).click().send_keys("new Delhi").perform()
+    action.move_to_element(from_city).click().send_keys("Dubai").perform()
 
     time.sleep(20)
 
